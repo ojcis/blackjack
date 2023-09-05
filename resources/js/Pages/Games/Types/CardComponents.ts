@@ -40,10 +40,10 @@ export class Card {
 }
 
 const suits: Suit[] = [
-    new Suit('clubs', '♥', 'red'),
+    new Suit('hearts', '♥', 'red'),
     new Suit ('spades', '♠', 'black'),
     new Suit('dimonds', '♦', 'red'),
-    new Suit('hearts', '♣', 'black'),
+    new Suit('clubs', '♣', 'black'),
 ];
 
 const cardFaces: CardFace[] = [

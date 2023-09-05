@@ -10,6 +10,6 @@ class BlackjackController extends Controller
 {
     public function play(): Response
     {
-        return inertia::render('Games/Blackjack');
+        return inertia::render('Games/Blackjack/Blackjack');
     }
 }

@@ -22,7 +22,7 @@ const showingNavigationDropdown = ref(false);
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('dashboard')">
                                     <ApplicationLogo
-                                        class="block h-9 w-auto fill-current text-gray-200"
+                                        class="text-5xl"
                                     />
                                 </Link>
                             </div>
@@ -36,7 +36,7 @@ const showingNavigationDropdown = ref(false);
                                     Blackjack
                                 </NavLink>
                                 <NavLink :href="route('slotmachine.play')" :active="route().current('slotmachine.play')">
-                                    Slot machine
+                                    Lucky Hand
                                 </NavLink>
                             </div>
                         </div>
@@ -125,7 +125,7 @@ const showingNavigationDropdown = ref(false);
                             Blackjack
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('slotmachine.play')" :active="route().current('slotmachine.play')">
-                            Slot machine
+                            Lucky Hand
                         </ResponsiveNavLink>
                     </div>
 

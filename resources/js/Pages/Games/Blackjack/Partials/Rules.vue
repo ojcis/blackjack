@@ -1,0 +1,31 @@
+<script setup lang="ts">
+    import SymbolButton from '@/Components/SymbolButton.vue';
+</script>
+
+<template>
+    <div class="absolute overflow-auto top-0 h-full w-full pt-6 px-4 text-start text-white bg-gray-800 bg-opacity-95">
+        <SymbolButton @click="$emit('close')" class="absolute top-0 right-2">x</SymbolButton>
+        <h2 class="text-sm sm:text-xl font-bold">Object of the Game</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">Beat the dealer by getting a count as close to 21 as possible, without going over 21. </p>
+        <h2 class="text-sm sm:text-xl font-bold">Deck and Card Values.</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">The standard 52-card deck is used. The deck is shuffled each round. It is up to player if an ace is worth 1 or 11. Face cards are 10 and any other card is its pip value.</p>
+        <h2 class="text-sm sm:text-xl font-bold">Betting</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">Before the deal begins, player places a bet. Minimum and maximum limits are from $2 to $500.</p>
+        <h2 class="text-sm sm:text-xl font-bold">The Deal</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">When player has placed bet, the dealer gives one card face up, and then one card face up to himself. Another round of cards is then dealt face up to player, but the dealer takes the second card face down.</p>
+        <h2 class="text-sm sm:text-xl font-bold">Naturals</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">If a player's first two cards are an ace and a "ten-card" (a picture card or 10), giving a count of 21 in two cards, this is a natural or "blackjack." If player has a natural and the dealer does not, the dealer immediately pays that player one and a half times the amount of their bet. If the dealer has a natural, they immediately collect the bet (but no additional amount). If the dealer and player both have naturals, the bet of that player is a stand-off (a tie), and the player takes back his chips.</p>
+        <h2 class="text-sm sm:text-xl font-bold">The Play</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">The player to the left goes first and must decide whether to "stand" (not ask for another card) or "hit" (ask for another card in an attempt to get closer to a count of 21, or even hit 21 exactly). Thus, a player may stand on the two cards originally dealt to them, or they may ask the dealer for additional cards, one at a time, until deciding to stand on the total (if it is 21 or under), or goes "bust" (if it is over 21). In the latter case, the player loses and the dealer collects the bet wagered. </p>
+        <h2 class="text-sm sm:text-xl font-bold">The Dealer's Play</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">When the dealer has served player, the dealers face-down card is turned up. If the total is 17 or more, it must stand. If the total is 16 or under, they must take a card. The dealer must continue to take cards until the total is 17 or more, at which point the dealer must stand. If the dealer has an ace, and counting it as 11 would bring the total to 17 or more (but not over 21), the dealer must count the ace as 11 and stand. The dealer's decisions, then, are automatic on all plays, whereas the player always has the option of taking one or more cards. </p>
+        <h2 class="text-sm sm:text-xl font-bold">Splitting Pairs</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">If a player's first two cards are of the same denomination, such as two jacks or two sixes, they may choose to treat them as two separate hands when their turn comes around. The amount of the original bet then goes on one of the cards, and an equal amount must be placed as a bet on the other card. The player first plays the hand to their left by standing or hitting one or more times; only then is the hand to the right played. The two hands are thus treated separately, and the dealer settles with each on its own merits. With a pair of aces, the player is given one card for each ace and may not draw again. Also, if a ten-card is dealt to one of these aces, the payoff is equal to the bet (not one and one-half to one, as with a blackjack at any other time).</p>
+        <h2 class="text-sm sm:text-xl font-bold">Doubling Down</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">Another option open to the player is doubling their bet when the original two cards dealt total 9, 10, or 11. When the player's turn comes, they place a bet equal to the original bet, and the dealer gives the player just one card, which is placed face down and is not turned up until the bets are settled at the end of the hand. With two fives, the player may split a pair, double down, or just play the hand in the regular way. </p>
+        <h2 class="text-sm sm:text-xl font-bold">Insurance</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">When the dealer's face-up card is an ace, player may make a side bet of up to half the original bet that the dealer's face-down card is a ten-card, and thus a blackjack for the house. If it is a ten-card, it is turned up, and if player had made the insurance bet win and are paid double the amount of their half-bet - a 2 to 1 payoff. When a blackjack occurs for the dealer, of course, the hand is over, and the players' main bet are collected - unless a player also has blackjack, in which case it is a stand-off.</p>
+        <h2 class="text-sm sm:text-xl font-bold">Settlement</h2>
+        <p class="text-sm sm:text-lg text-gray-300 pb-2 sm:pb-4">A bet once paid and collected is never returned. Thus, one key advantage to the dealer is that the player goes first. If the player goes bust, he has already lost his wager. If the dealer goes over 21, and player does not, the dealer pays player the amount of player's bet. If the dealer stands at 21 or less, the dealer pays the bet if player has higher total (not exceeding 21), but collects the bet if player has a lower total. If there is a stand-off (a player having the same total as the dealer), no chips are paid out or collected.</p>
+    </div>
+</template>

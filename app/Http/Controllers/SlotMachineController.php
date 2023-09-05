@@ -10,6 +10,6 @@ class SlotMachineController extends Controller
 {
     public function play(): Response
     {
-        return inertia::render('Games/SlotMachine');
+        return inertia::render('Games/SlotMachine/SlotMachine');
     }
 }

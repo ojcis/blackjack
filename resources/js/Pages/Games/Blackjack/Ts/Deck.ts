@@ -1,5 +1,5 @@
-import { Card } from './CardComponents';
-import cardComponents from './CardComponents';
+import { Card } from '@/Pages/Games/Types/CardComponents';
+import cardComponents from '@/Pages/Games/Types/CardComponents';
 
 const deck: Card[] = [];
 cardComponents.suits.forEach(suit => {
