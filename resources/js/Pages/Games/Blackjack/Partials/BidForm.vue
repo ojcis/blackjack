@@ -6,7 +6,6 @@ defineProps<{
     buttonName: string;
     max: number;
     min: number;
-    error: string;
 }>();
 
 defineEmits(['click', 'update:amount'])
@@ -18,7 +17,5 @@ defineEmits(['click', 'update:amount'])
         <LargeButton @click="$emit('click')"> {{ buttonName }} </LargeButton>
     </section>
     <div class="text-sm sm:text-lg">
-        <p v-if="error != ''" class="text-red-500 h-4 pt-0.5">{{ error }}</p>
-        <p v-else class="text-gray-200 h-4 pt-0.5"><slot/></p>
     </div>
 </template>

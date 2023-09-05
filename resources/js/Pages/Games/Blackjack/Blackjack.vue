@@ -41,16 +41,14 @@ const game = reactive(new Game(deck));
                         </div>
                         <div class="flex items-center justify-center text-center pb-4">
                             <section>
-                                <BidForm v-if="game.insuranceForm" @click="game.continue(insurance)" v-model:amount="insurance" button-name="insure" :min="1" :max="bidAmount/2" :error="game.bid.error">
-                                    Leave 0 if you dont want to insure.
-                                </BidForm>
+                                <BidForm v-if="game.insuranceForm" @click="game.continue(insurance)" v-model:amount="insurance" button-name="insure" :min="1" :max="bidAmount/2"/>
                                 <section v-else-if="game.activeGame">
                                     <LargeButton @click="game.hit(game.playerHands[game.activeHandId])" :disable="game.disableButton" class="mr-1 sm:mr-2"> Hit </LargeButton>
                                     <LargeButton @click="game.stand(game.playerHands[game.activeHandId])" :disable="game.disableButton" class="mr-1 sm:mr-2"> Stand </LargeButton>
                                     <LargeButton v-if="game.doubleButton" @click.once="game.double(game.playerHands[game.activeHandId])">Double</LargeButton>
-                                    <p class="h-4"></p>
                                 </section>
-                                <BidForm v-else @click="game.start(bidAmount)" v-model:amount="bidAmount" button-name="bid" :min="2" :max="500" :error="game.bid.error"/>
+                                <BidForm v-else @click="game.start(bidAmount)" v-model:amount="bidAmount" button-name="bid" :min="2" :max="500"/>
+                                <p class="text-sm sm:text-xl text-red-500 h-4 pt-0.5">{{ game.bid.error }}</p>
                             </section>
                         </div>
                         <SymbolButton @click="showRules = true" class="absolute -bottom-2 sm:bottom-0 left-0 sm:left-2">?</SymbolButton>
